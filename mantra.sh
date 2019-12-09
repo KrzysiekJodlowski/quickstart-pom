@@ -42,6 +42,8 @@ echo "Generating .gitignore.."
 curl -L -s https://raw.githubusercontent.com/github/gitignore/master/Global/JetBrains.gitignore > "$NAME"/.gitignore
 echo "*.class" >> "$NAME"/.gitignore
 echo "*.swp" >> "$NAME"/.gitignore
+echo ".idea/" >> "$NAME"/.gitignore
+echo "stale_output_checked" >> "$NAME"/.gitignore
 
 echo "Project generated succesfully."
 echo "Initializing git repository and creating first commit.."
