@@ -2,7 +2,7 @@
 # Author: Krzysztof Jodłowski
 
 NAME=${1:-"my-app"}
-GROUP=${2:-"com.epam"}
+GROUP=${2:-"java.academy"}
 GROUP_PATH="${GROUP//.//}"
 VERSION=${3:-"0.1"}
 FOLDER_STRUCTURE="$NAME"/src/{main,test}/java/"$GROUP_PATH"/"$NAME" 
