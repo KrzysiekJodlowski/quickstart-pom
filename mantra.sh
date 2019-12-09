@@ -17,9 +17,10 @@ touch "$NAME"/src/test/java/"$GROUP_PATH"/"$NAME"/AppTest.java
 echo "Generating pom.xml.."
 
 curl -L -s https://raw.githubusercontent.com/KrzysiekJodlowski/quickstart-pom/master/pom.xml > "$NAME"/pom.xml
-sed -i s/com.mycompany.app/"$GROUP"/g "$NAME"/pom.xml
-sed -i s/my-app/"$NAME"/g "$NAME"/pom.xml
-sed -i s/1.0-SNAPSHOT/"$VERSION"/g "$NAME"/pom.xml
+sed -i s/*GROUP*/"$GROUP"/g "$NAME"/pom.xml
+sed -i s/*NAME*/"$NAME"/g "$NAME"/pom.xml
+sed -i s/*ARTIFACT*/"$NAME"/g "$NAME"/pom.xml
+sed -i s/*VERSION*/"$VERSION"/g "$NAME"/pom.xml
 
 echo "Generating readme.md.."
 
