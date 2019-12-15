@@ -4,7 +4,6 @@
 ARTIFACT_ID=${1:-"myapp"}
 NAME=${2:-"myapp"}
 DESCRIPTION=${3:-"Demo of $NAME"}
-FOLDER_STRUCTURE="$NAME"/src/{main,test}/java/com/academy/"$ARTIFACT_ID" 
 
 echo "Generating project $NAME.."
 echo "Creating folder structure.."
