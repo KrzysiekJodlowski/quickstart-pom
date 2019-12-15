@@ -9,6 +9,8 @@ echo "Generating project $NAME.."
 echo "Creating folder structure.."
 
 mkdir -p "$NAME"/src/{main,test}/java/com/academy/"$ARTIFACT_ID"
+mkdir -p "$NAME"/src/main/resources
+mkdir -p "$NAME"/src/test/resources
 
 echo "Generating pom.xml.."
 
