@@ -1,8 +1,8 @@
 #!/bin/bash
 # Author: Krzysztof Jodłowski
 
-ARTIFACT_ID=${1:-"my-app"}
-NAME=${2:-"my-app"}
+ARTIFACT_ID=${1:-"myapp"}
+NAME=${2:-"myapp"}
 DESCRIPTION=${3:-"Demo of $NAME"}
 FOLDER_STRUCTURE="$NAME"/src/{main,test}/java/java/academy/"$ARTIFACT_ID" 
 
