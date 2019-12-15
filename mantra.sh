@@ -4,12 +4,12 @@
 ARTIFACT_ID=${1:-"myapp"}
 NAME=${2:-"myapp"}
 DESCRIPTION=${3:-"Demo of $NAME"}
-FOLDER_STRUCTURE="$NAME"/src/{main,test}/java/java/academy/"$ARTIFACT_ID" 
+FOLDER_STRUCTURE="$NAME"/src/{main,test}/java/com/academy/"$ARTIFACT_ID" 
 
 echo "Generating project $NAME.."
 echo "Creating folder structure.."
 
-mkdir -p "$NAME"/src/{main,test}/java/java/academy/"$ARTIFACT_ID"
+mkdir -p "$NAME"/src/{main,test}/java/com/academy/"$ARTIFACT_ID"
 
 echo "Generating pom.xml.."
 
@@ -30,7 +30,7 @@ To run project you have to use:
 - jdk version 11
 - maven version >= 3.6.0
 
-To build project simply run "mvn package" command, to make it work run "java -jar target/$NAME-0.1.jar java.academy.YourMainClass"
+To build project simply run "mvn package" command, to make it work run "java -jar target/$NAME-0.1.jar com.academy.YourMainClass"
 EOF
 
 echo "Generating .gitignore.."
