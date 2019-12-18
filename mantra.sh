@@ -15,9 +15,9 @@ mkdir -p "$NAME"/src/test/resources
 echo "Generating pom.xml.."
 
 curl -L -s https://raw.githubusercontent.com/KrzysiekJodlowski/quickstart-pom/master/pom.xml > "$NAME"/pom.xml
-sed -i s/#APP/"$ARTIFACT_ID"/g "$NAME"/pom.xml
-sed -i s/#NAME/"$NAME"/g "$NAME"/pom.xml
-sed -i s/#DESC/"$DESCRIPTION"/g "$NAME"/pom.xml
+sed -i s/"#APP"/"$ARTIFACT_ID"/g "$NAME"/pom.xml
+sed -i s/"#NAME"/"$NAME"/g "$NAME"/pom.xml
+sed -i s/"#DESC"/"$DESCRIPTION"/g "$NAME"/pom.xml
 
 echo "Generating readme.md.."
 
@@ -37,10 +37,6 @@ EOF
 echo "Generating .gitignore.."
 
 curl -L -s https://www.gitignore.io/api/java,maven,intellij+all > "$NAME"/.gitignore
-# echo "*.class" >> "$NAME"/.gitignore
-# echo "*.swp" >> "$NAME"/.gitignore
-# echo ".idea/" >> "$NAME"/.gitignore
-# echo "stale_output_checked" >> "$NAME"/.gitignore
 
 echo "Project generated succesfully."
 echo "Initializing git repository and creating first commit.."
@@ -52,4 +48,4 @@ git commit -m "Initialize $NAME project"
 
 echo "Opening project with Intellij Idea.."
 
-intellij-idea-community pom.xml &
+intellij-idea-community pom.xml . &
