@@ -36,7 +36,8 @@ EOF
 
 echo "Generating .gitignore.."
 
-curl -L -s https://www.gitignore.io/api/java,maven,intellij+all > "$NAME"/.gitignore
+curl -L -s https://www.gitignore.io/api/java,maven,intellij+all > "$NAME"/.gitignore"$NAME"/.gitignore
+echo stale_outputs_checked >> "$NAME"/.gitignore
 
 echo "Project generated succesfully."
 echo "Initializing git repository and creating first commit.."
