@@ -21,17 +21,21 @@ sed -i s/"#DESC"/"$DESCRIPTION"/g "$NAME"/pom.xml
 
 echo "Generating readme.md.."
 
-cat << EOF > "$NAME"/readme.md
-Title: $NAME
-Author: Krzysztof Jodłowski
-Version: 0.1
+cat << EOF > "$NAME"/readme.adoc
+== $NAME
+
+*Author*: _Krzysztof Jodłowski_ +
+*Version*: _0.1_
+
+$DESCRIPTION
 
 To run project you have to use:
-- bash or other compatible unix shell
-- jdk version 11
-- maven version >= 3.6.0
 
-To build project simply run "mvn package" command, to make it work run "java -jar target/$NAME-0.1.jar com.academy.YourMainClass"
+* bash or other compatible unix shell
+* jdk version 11+
+* maven version 3.6.0+
+
+To build project simply run _"mvn package"_ command, to make it work run _"java -jar target/$NAME-0.1.jar"_
 EOF
 
 echo "Generating .gitignore.."
