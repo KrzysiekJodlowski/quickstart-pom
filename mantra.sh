@@ -19,7 +19,7 @@ sed -i s/"#APP"/"$ARTIFACT_ID"/g "$NAME"/pom.xml
 sed -i s/"#NAME"/"$NAME"/g "$NAME"/pom.xml
 sed -i s/"#DESC"/"$DESCRIPTION"/g "$NAME"/pom.xml
 
-echo "Generating readme.md.."
+echo "Generating readme.."
 
 cat << EOF > "$NAME"/readme.adoc
 == $NAME
